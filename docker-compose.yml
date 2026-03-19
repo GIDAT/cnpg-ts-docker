@@ -1,0 +1,9 @@
+services:
+  container:
+    image: ghcr.io/gidat/cnpg-ts:${POSTGRES_VERSION}_${TIMESCALE_VERSION}
+    build:
+      context: .
+      args:
+        CLOUDNATIVEPG_VERSION: ${CLOUDNATIVEPG_VERSION}
+        POSTGRES_VERSION: ${POSTGRES_VERSION}
+        TIMESCALE_VERSION: ${TIMESCALE_VERSION}
